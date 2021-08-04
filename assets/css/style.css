@@ -195,6 +195,34 @@ body section#summer .row img {
   transform: translateY(-50px);
 }
 
+body section#info {
+  min-height: 300px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+}
+
+body section#info .icon i {
+  font-size: 30px;
+  color: #495057;
+}
+
+body section#info .text p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 8px;
+}
+
+body section#info .text--dark {
+  font-weight: 900;
+  color: #212529;
+}
+
+body section#info .text--muted {
+  font-weight: 600;
+  color: #868e96;
+}
+
 @keyframes slide-up {
   from {
     opacity: 0;

@@ -125,7 +125,6 @@ body {
             height: 400px;
             background-color: $summer-layout;
             overflow-x: clip;
-            // overflow-y: visible;
             fill: $summer-color;
             position: relative;
 
@@ -182,6 +181,36 @@ body {
                 transform: translateY(-50px);
             }
         }
+    }
+    section#info{
+        min-height: 300px;
+        background-color: $info-layout;
+        display: flex;
+        align-items: center;
+
+        .icon{
+            i{
+                font-size: 30px;
+                color: $contact-letter-color;
+             }
+        }
+        .text{
+            p{
+                font-size: 14px;
+                
+                line-height: 1.5;
+                margin: 8px;
+            }
+            &--dark{
+                font-weight: 900;
+                color: $contact-hover-text;
+            }
+            &--muted{
+                font-weight: 600;
+                color: $contact-text;
+            }
+        }
+        
     }
 }
 @keyframes slide-up {
