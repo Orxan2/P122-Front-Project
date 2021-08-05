@@ -13,6 +13,11 @@ a {
   text-decoration: none;
 }
 
+.collapse {
+  -webkit-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
+}
+
 body section#products .product-list .list-group-item a {
   color: #868e96;
   font-weight: 600;
@@ -323,8 +328,10 @@ body footer .myList a.btn i {
   right: 0;
   font-size: 30px;
   bottom: 0;
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 body footer .myList a.btn i.fa-plus {
@@ -333,11 +340,6 @@ body footer .myList a.btn i.fa-plus {
 
 body footer .myList a.btn i.fa-minus {
   opacity: 0;
-}
-
-body footer .myList a.btn:hover i {
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
 }
 
 body footer .myList .contact-list {

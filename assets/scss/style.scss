@@ -271,20 +271,15 @@ body {
                     right: 0;
                     font-size: 30px;
                     bottom: 0;
-                    // transition: all .3s linear;                   
+                    transform: rotate(90deg);
+                    transition: all .2s linear;                   
                 }
                 i.fa-plus{
-                    display: block;
+                    opacity: 1;
                 }
                 i.fa-minus{
-                    display: none;
-                }
-
-                // &:hover{
-                //     i{
-                //         transform: rotate(90deg);
-                //     }
-                // }
+                    opacity: 0;
+                }               
             }
             .contact-list{
                 display: none;
@@ -337,7 +332,6 @@ body {
                 a{
                     color: $copyright-color;
                     font-weight: 600;
-                    // font-size: 13px;
                     &:hover{
                         text-decoration: underline;
                     }

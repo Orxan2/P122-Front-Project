@@ -30,17 +30,19 @@ $(document).ready(function () {
 
             $(element).next().slideToggle("slow");
           
-
-            // $(minus).css('transform','rotate(90deg)');
-            // $(plus).css('transform','rotate(90deg)');
-            if (minus.style.display == 'block') {
-                minus.style.display = 'none'
-                plus.style.display = 'block'
+            if (minus.style.opacity == '1') {
+                minus.style.opacity = '0'
+                plus.style.opacity = '1'
+                $(minus).removeClass('mycollapse');
+                $(plus).removeClass('mycollapse');
+                
                
             }
             else {
-                plus.style.display = 'none'
-                minus.style.display = 'block'
+                plus.style.opacity = '0'
+                minus.style.opacity = '1'
+                $(plus).addClass('mycollapse');
+                $(minus).addClass('mycollapse');
                
             }
         });
