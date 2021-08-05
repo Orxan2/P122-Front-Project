@@ -1,0 +1,24 @@
+{
+  "name": "p122-front-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass assets/scss/style.scss -o assets/css",
+    "css:watch": "npm run css && node-sass --output-style compressed assets/scss/style.scss -wo assets/css"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orxan2/P122-Front-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orxan2/P122-Front-Project/issues"
+  },
+  "homepage": "https://github.com/Orxan2/P122-Front-Project#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

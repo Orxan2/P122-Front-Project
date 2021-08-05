@@ -212,6 +212,139 @@ body {
         }
         
     }
+    footer{
+        .left-side{
+            p{
+                color: $contact-text;
+                font-weight: bold;   
+               margin: 0;
+               font-size: 14px;    
+            }
+            .input-group{
+                input{
+                    border: 0;
+                    border-bottom: 1px solid $contact-border-color;
+                    transition: border .3s linear;
+                    
+                    &:focus{
+                        box-shadow: none;
+                        z-index: 0;
+
+                    }
+                    &:hover{
+                        border-bottom: 1px solid $contact-hover-text;
+                    }
+
+                    &::placeholder{
+                        color: $copyright-color;
+                        font-weight: 600;
+                    }
+                }
+                a{
+                    position: absolute;
+                    font-size: 35px;
+                    color: gray;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    transition: color .3s linear;
+
+                    &:hover{
+                        color: $contact-hover-text;
+                    }
+                }
+                
+            }
+        }
+        .myList{
+
+            a.btn{
+                color: $contact-hover-text;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+                padding: 0; 
+                text-align: left; 
+                position: relative;
+
+                i{
+                    position: absolute;
+                    right: 0;
+                    font-size: 30px;
+                    bottom: 0;
+                    // transition: all .3s linear;                   
+                }
+                i.fa-plus{
+                    display: block;
+                }
+                i.fa-minus{
+                    display: none;
+                }
+
+                // &:hover{
+                //     i{
+                //         transform: rotate(90deg);
+                //     }
+                // }
+            }
+            .contact-list{
+                display: none;
+                h6{
+                    color: $contact-hover-text;
+                    font-weight: 700;
+                    margin-bottom: 1.5rem;
+                }
+                li{
+                    margin: 8px 0;
+                    
+                    a{
+                        position: relative;
+                        padding: 4px 0;
+                        color: $contact-text;
+                        transition: color .3s linear;
+                        font-weight: 600;
+                        
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 2px;
+                            background-color: $contact-hover-text;  
+                            transition: all .5s linear;                  
+                        }
+        
+                        &:hover{
+                            color: $contact-hover-text;
+                            &::after{
+                                width: 100%;                                            
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+      
+        .copyright{
+            small{
+                color: $copyright-color;
+                font-weight: 600;
+            }            
+        }
+        .site-rules{
+            li{
+                a{
+                    color: $copyright-color;
+                    font-weight: 600;
+                    // font-size: 13px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }
 @keyframes slide-up {
     from {
