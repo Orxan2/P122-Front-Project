@@ -2,6 +2,117 @@
 @import "reset";
 
 body {
+    section#populars {
+        .popular-card {
+            transition: transform .2s linear;
+            
+            &__body{
+                &--transform{
+                    transform: translateX(25%);
+                }
+            }
+            &__title {
+                font-weight: 700;
+            }
+            &__text{
+                color: $contact-text;
+                font-weight: 600;
+            }
+            &__btn{
+                padding: 0;
+                letter-spacing: 2px;
+                color: $contact-hover-text;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+    section#time {
+        background-color: $bg-gray;
+
+        .row {
+            min-height: 500px;
+
+            // overflow-x: clip;
+            fill: $summer-color;
+            position: relative;
+
+            svg {
+                position: absolute;
+                width: 500px;
+                left: -297px;
+                top: 0;
+                transform: rotate(156deg);
+            }
+
+            .discount {
+                // height: 100%;
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                // z-index: 1;
+
+                &__text {
+                    color: $btn-red;
+                    font-size: 17px;
+                    letter-spacing: 3px;
+                    font-weight: 700;
+                    z-index: 1;
+                }
+                &__heading {
+                    font-size: 40px;
+                    font-weight: 700;
+                    z-index: 1;
+                }
+                &__price {
+                    display: flex;
+                    z-index: 1;
+                    del,
+                    span {
+                        color: $contact-text;
+                        font-weight: 600;
+                    }
+                }
+                &__percent {
+                    z-index: 1;
+                    background-color: $btn-red;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-shadow: 0 0 2px white;
+                }
+                &__btn {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    border: 1px solid $contact-hover-text;
+                    border-radius: 0;
+                    transition: all 0.2s linear;
+
+                    z-index: 1;
+
+                    &:hover {
+                        background-color: $contact-hover-text;
+                        color: white;
+                    }
+                }
+            }
+
+            // img {
+            //     left: 70%;
+            //     top: 10%;
+            //     position: absolute;
+            // }
+        }
+    }
+
     section#products {
         .product-list {
             .list-group-item {
@@ -134,14 +245,13 @@ body {
                 left: -300px;
                 top: -100px;
             }
-           
+
             .slogan {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                
 
                 &__heading {
                     font-size: 70px;
@@ -164,7 +274,7 @@ body {
                     border-radius: 0;
                     transition: all 0.2s linear;
                     align-self: center;
-                    
+
                     z-index: 1;
 
                     &:hover {
@@ -182,157 +292,152 @@ body {
             }
         }
     }
-    section#info{
+    section#info {
         min-height: 300px;
         background-color: $info-layout;
         display: flex;
         align-items: center;
 
-        .icon{
-            i{
+        .icon {
+            i {
                 font-size: 30px;
                 color: $contact-letter-color;
-             }
+            }
         }
-        .text{
-            p{
+        .text {
+            p {
                 font-size: 14px;
-                
+
                 line-height: 1.5;
                 margin: 8px;
             }
-            &--dark{
+            &--dark {
                 font-weight: 900;
                 color: $contact-hover-text;
             }
-            &--muted{
+            &--muted {
                 font-weight: 600;
                 color: $contact-text;
             }
         }
-        
     }
-    footer{
-        .left-side{
-            p{
+    footer {
+        .left-side {
+            p {
                 color: $contact-text;
-                font-weight: bold;   
-               margin: 0;
-               font-size: 14px;    
+                font-weight: bold;
+                margin: 0;
+                font-size: 14px;
             }
-            .input-group{
-                input{
+            .input-group {
+                input {
                     border: 0;
                     border-bottom: 1px solid $contact-border-color;
-                    transition: border .3s linear;
-                    
-                    &:focus{
+                    transition: border 0.3s linear;
+
+                    &:focus {
                         box-shadow: none;
                         z-index: 0;
-
                     }
-                    &:hover{
+                    &:hover {
                         border-bottom: 1px solid $contact-hover-text;
                     }
 
-                    &::placeholder{
+                    &::placeholder {
                         color: $copyright-color;
                         font-weight: 600;
                     }
                 }
-                a{
+                a {
                     position: absolute;
                     font-size: 35px;
                     color: gray;
                     right: 0;
                     bottom: 0;
                     z-index: 2;
-                    transition: color .3s linear;
+                    transition: color 0.3s linear;
 
-                    &:hover{
+                    &:hover {
                         color: $contact-hover-text;
                     }
                 }
-                
             }
         }
-        .myList{
-
-            a.btn{
+        .myList {
+            a.btn {
                 color: $contact-hover-text;
                 font-weight: 700;
                 margin-bottom: 1.5rem;
-                padding: 0; 
-                text-align: left; 
+                padding: 0;
+                text-align: left;
                 position: relative;
 
-                i{
+                i {
                     position: absolute;
                     right: 0;
                     font-size: 30px;
                     bottom: 0;
                     transform: rotate(90deg);
-                    transition: all .2s linear;                   
+                    transition: all 0.2s linear;
                 }
-                i.fa-plus{
+                i.fa-plus {
                     opacity: 1;
                 }
-                i.fa-minus{
+                i.fa-minus {
                     opacity: 0;
-                }               
+                }
             }
-            .contact-list{
+            .contact-list {
                 display: none;
-                h6{
+                h6 {
                     color: $contact-hover-text;
                     font-weight: 700;
                     margin-bottom: 1.5rem;
                 }
-                li{
+                li {
                     margin: 8px 0;
-                    
-                    a{
+
+                    a {
                         position: relative;
                         padding: 4px 0;
                         color: $contact-text;
-                        transition: color .3s linear;
+                        transition: color 0.3s linear;
                         font-weight: 600;
-                        
-                        &::after{
-                            content: '';
+
+                        &::after {
+                            content: "";
                             position: absolute;
                             bottom: 0;
                             left: 0;
                             width: 0;
                             height: 2px;
-                            background-color: $contact-hover-text;  
-                            transition: all .5s linear;                  
+                            background-color: $contact-hover-text;
+                            transition: all 0.5s linear;
                         }
-        
-                        &:hover{
+
+                        &:hover {
                             color: $contact-hover-text;
-                            &::after{
-                                width: 100%;                                            
+                            &::after {
+                                width: 100%;
                             }
                         }
                     }
-    
                 }
             }
         }
-      
-        .copyright{
-            small{
+
+        .copyright {
+            small {
                 color: $copyright-color;
                 font-weight: 600;
-            }            
+            }
         }
-        .site-rules{
-            li{
-                a{
+        .site-rules {
+            li {
+                a {
                     color: $copyright-color;
                     font-weight: 600;
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
