@@ -16,8 +16,111 @@ a {
   transform: rotate(0deg) !important;
 }
 
+body #carouselExampleIndicators {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+body #carouselExampleIndicators .carousel-indicators button {
+  height: 5px;
+  border-radius: 50%;
+  width: 5px;
+  background-color: #868e96;
+}
+
+body #carouselExampleIndicators .carousel-indicators .active {
+  background-color: #bcac76;
+  transform: scale(2);
+}
+
+body #carouselExampleIndicators .carousel-inner {
+  z-index: 1;
+}
+
+body #carouselExampleIndicators .carousel-inner .content {
+  width: 50%;
+}
+
+body #carouselExampleIndicators .carousel-inner .content .shop-text {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+body #carouselExampleIndicators .carousel-inner .content .shop-small-text {
+  color: #868e96;
+  font-weight: 600;
+}
+
+body #carouselExampleIndicators .carousel-inner .content .shop-title {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+body #carouselExampleIndicators .carousel-inner .content .shop-btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 1px solid #bcac76;
+  border-radius: 0;
+  transition: all 0.2s linear;
+  align-self: center;
+  color: #bcac76;
+  margin-top: 3rem;
+  z-index: 1;
+}
+
+body #carouselExampleIndicators .carousel-inner .content .shop-btn:hover {
+  background-color: #bcac76;
+  color: white;
+}
+
+body #carouselExampleIndicators .carousel-inner .background-container {
+  position: relative;
+  width: 50%;
+}
+
+body #carouselExampleIndicators .carousel-inner .background-container img {
+  position: relative;
+  z-index: 1;
+}
+
+body #carouselExampleIndicators .carousel-inner .background-container svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+body #carouselExampleIndicators .carousel-inner .background-container--gray path {
+  fill: #e7eaf9;
+}
+
+body #carouselExampleIndicators .carousel-inner .background-container--pink path {
+  fill: #ffdddd;
+}
+
+body #carouselExampleIndicators .carousel-inner .background-container--gold path {
+  fill: #f5e6a8;
+}
+
+body #carouselExampleIndicators .big-path {
+  position: absolute;
+  width: 700px;
+  left: -200px;
+  top: -200px;
+}
+
+body #carouselExampleIndicators .big-path path {
+  width: 700px;
+  fill: #e0d4ab;
+}
+
 body section#populars .popular-card {
-  transition: transform .2s linear;
+  transition: transform 0.2s linear;
+  overflow: hidden;
 }
 
 body section#populars .popular-card__body--transform {
@@ -65,7 +168,6 @@ body section#time .row svg {
 }
 
 body section#time .row .discount {
-  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

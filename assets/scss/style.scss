@@ -2,23 +2,124 @@
 @import "reset";
 
 body {
+    #carouselExampleIndicators {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .carousel-indicators {
+            button {
+                height: 5px;
+                border-radius: 50%;
+                width: 5px;
+                background-color: $contact-text;    
+            }
+            .active{
+                background-color: $summer-color;
+                transform: scale(2);
+            }
+        }
+
+        .carousel-inner {
+            z-index: 1;
+
+            .content {
+                width: 50%;
+                .shop-text {
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+                .shop-small-text {
+                    color: $contact-text;
+                    font-weight: 600;
+                }
+                .shop-title {
+                    font-size: 72px;
+                    font-weight: 700;
+                }
+                .shop-btn {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    border: 1px solid $summer-color;
+                    border-radius: 0;
+                    transition: all 0.2s linear;
+                    align-self: center;
+                    color: $summer-color;
+                    margin-top: 3rem;
+                    z-index: 1;
+
+                    &:hover {
+                        background-color: $summer-color;
+                        color: white;
+                    }
+                }
+            }
+            .background-container {
+                position: relative;
+                width: 50%;
+                img {
+                    position: relative;
+                    z-index: 1;
+                }
+                svg {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                }
+
+                &--gray {
+                    path {
+                        fill: $home-imageShadowPath-color;
+                    }
+                }
+                &--pink {
+                    path {
+                        fill: $home-imageShadowPath2-color;
+                    }
+                }
+                &--gold {
+                    path {
+                        fill: $home-imageShadowPath3-color;
+                    }
+                }
+            }
+        }
+
+        .big-path {
+            position: absolute;
+            width: 700px;
+            left: -200px;
+            top: -200px;
+
+            path {
+                width: 700px;
+                fill: $home-bigPath-color;
+                // height: 700px;
+            }
+        }
+    }
+
     section#populars {
         .popular-card {
-            transition: transform .2s linear;
-            
-            &__body{
-                &--transform{
+            transition: transform 0.2s linear;
+            overflow: hidden;
+            &__body {
+                &--transform {
                     transform: translateX(25%);
                 }
             }
             &__title {
                 font-weight: 700;
             }
-            &__text{
+            &__text {
                 color: $contact-text;
                 font-weight: 600;
             }
-            &__btn{
+            &__btn {
                 padding: 0;
                 letter-spacing: 2px;
                 color: $contact-hover-text;
@@ -27,7 +128,7 @@ body {
                 font-size: 14px;
             }
 
-            &:hover{
+            &:hover {
                 transform: scale(1.05);
             }
         }
@@ -51,13 +152,11 @@ body {
             }
 
             .discount {
-                // height: 100%;
-                width: 500px;
+                // width: 500px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                // z-index: 1;
 
                 &__text {
                     color: $btn-red;
