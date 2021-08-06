@@ -82,6 +82,8 @@ a {
 
 .mymodal-product {
   display: flex;
+  border-bottom: 1px solid #ced4da;
+  padding: 2rem 0;
 }
 
 .mymodal-image {
@@ -91,34 +93,50 @@ a {
   align-items: center;
 }
 
+.mymodal-title {
+  font-weight: 700;
+  position: relative;
+  padding: 4px 0;
+  color: #868e96;
+  transition: color 0.3s linear;
+}
+
+.mymodal-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #212529;
+  transition: all 0.5s linear;
+}
+
+.mymodal-title:hover {
+  color: #212529;
+}
+
+.mymodal-title:hover::after {
+  width: 100%;
+}
+
+.mymodal-title-price {
+  font-weight: 700;
+}
+
+.mymodal-title-quantity {
+  color: #adb5bd;
+  font-size: 14px;
+}
+
 body header {
   position: relative;
   z-index: 1;
   background-color: white;
 }
 
-body header .menu-icon {
-  position: relative;
-}
-
 body header .menu-icon svg {
   width: 25px;
-}
-
-body header .menu-icon .quantity {
-  position: absolute;
-  top: 5px;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border-radius: 1px solid black;
-  padding: 0.25rem;
-  font-size: 10px;
-  font-weight: 700;
-  text-shadow: 0 0 1px white;
-  background-color: black;
-  color: white;
-  display: none;
 }
 
 body header a.nav-link {
@@ -147,6 +165,22 @@ body header form .btn-search i {
 
 body header .svg-boxes svg {
   width: 25px;
+}
+
+body header .svg-boxes .quantity {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 0 0.25rem;
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 0 1px white;
+  background-color: black;
+  color: white;
+  display: flex;
 }
 
 body #carouselExampleIndicators {

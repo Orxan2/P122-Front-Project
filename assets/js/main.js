@@ -84,40 +84,83 @@ $(document).ready(function () {
     $('.addbasket > a').each(function (index, element) {
         element == this;
 
+
         $(element).on('click', () => {
             let productDatas = JSON.parse(localStorage.getItem('product'));
             let productCount = $('header .quantity');
-            productCount.css('display','block'); 
+            // productCount.css('display', 'block');
 
             let product = {
-                id: index+1,
+                id: index + 1,
                 name: $(element).parent().parent().next().children()[0].innerText,
                 quantity: 1,
                 price: $(element).parent().parent().next().children()[1].children[0].innerText,
                 path: $(element).parent().parent().children()[0].getAttribute('src')
-        }
+            }
             if (productDatas == null) {
                 productDatas = [];
                 productDatas.push(product);
                 console.log(productDatas);
-                localStorage.setItem('product',JSON.stringify(productDatas));                   
-                $(productCount).val(productDatas.length);        
-            } 
+                localStorage.setItem('product', JSON.stringify(productDatas));
+                $(productCount).val(productDatas.length);
+            }
             else {
 
-                if (productDatas.find(x=>x.id==(index+1))) {
-                  alert('məhsul artıq kartda var');
-                  return;
-                } 
+                if (productDatas.find(x => x.id == (index + 1))) {
+                    alert('məhsul artıq kartda var');
+                    return;
+                }
                 else {
                     productDatas.push(product);
-                console.log(productDatas);
-                localStorage.setItem('product',JSON.stringify(productDatas));                   
+                    console.log(productDatas);
+                    localStorage.setItem('product', JSON.stringify(productDatas));
                 }
             }
             console.log(productCount[0]);
-        productCount[0].innerHTML = productDatas.length;
-       
+            productCount[0].innerHTML = productDatas.length;
+
+          $(productDatas).each(function(index, element) {
+            const modalBody = document.querySelector('.mymodal .mymodal-body');
+            const modalProduct = document.createElement('div');
+            const modalImageBox = document.createElement('div');
+            const modalImage = document.createElement('img');
+            const mymodalText = document.createElement('div');
+            const mymodalTitle = document.createElement('a');
+            const mymodalQuantity = document.createElement('h6');
+            const mymodalPrice = document.createElement('h6');
+
+            $(modalProduct).addClass('mymodal-product');
+            $(modalImageBox).addClass('mymodal-image');
+            $(modalImage).addClass('h-100');
+            $(mymodalText).addClass('mymodal-text');
+            $(mymodalText).addClass('mx-3');
+            $(mymodalTitle).addClass('btn');
+            $(mymodalTitle).addClass('mymodal-title');
+            $(mymodalQuantity).addClass('mymodal-quantity');
+            $(mymodalPrice).addClass('mymodal-price');
+
+            mymodalTitle.innerText = element.name;
+            mymodalQuantity.innerText = `quantity : ${element.quantity}`;
+            mymodalPrice.innerText = element.price;
+            $(modalImage).attr('src', element.path);
+
+
+
+            $(mymodalTitle).appendTo(mymodalText);
+            $(mymodalQuantity).appendTo(mymodalText);
+            $(mymodalPrice).appendTo(mymodalText);
+            $(modalImage).appendTo(modalImageBox);
+
+            $(modalImageBox).appendTo(modalProduct);
+            $(mymodalText).appendTo(modalProduct);
+
+            $(modalProduct).appendTo(modalBody);
+
+          })
+
+          
+
+
         });
 
     });

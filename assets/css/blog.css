@@ -82,6 +82,8 @@ a {
 
 .mymodal-product {
   display: flex;
+  border-bottom: 1px solid #ced4da;
+  padding: 2rem 0;
 }
 
 .mymodal-image {
@@ -89,6 +91,42 @@ a {
   height: 75px;
   display: flex;
   align-items: center;
+}
+
+.mymodal-title {
+  font-weight: 700;
+  position: relative;
+  padding: 4px 0;
+  color: #868e96;
+  transition: color 0.3s linear;
+}
+
+.mymodal-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #212529;
+  transition: all 0.5s linear;
+}
+
+.mymodal-title:hover {
+  color: #212529;
+}
+
+.mymodal-title:hover::after {
+  width: 100%;
+}
+
+.mymodal-title-price {
+  font-weight: 700;
+}
+
+.mymodal-title-quantity {
+  color: #adb5bd;
+  font-size: 14px;
 }
 
 body .blog-card__footer--style {

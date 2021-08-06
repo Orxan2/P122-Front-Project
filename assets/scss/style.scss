@@ -8,25 +8,10 @@ body {
         background-color: white;
 
         .menu-icon {
-            position: relative;
+
             svg {
                 width: 25px;
-            }
-            .quantity{
-                position: absolute;
-                top: 5px;
-                left: 80%;
-                transform: translate(-50%,-50%);
-                border-radius: 50%;
-                border-radius: 1px solid black;
-                padding: 0.25rem;
-                font-size: 10px;
-                font-weight: 700;
-                text-shadow: 0 0 1px white;
-                background-color: black;
-                color: white;
-                display: none;
-            }
+            }           
         }
         a.nav-link {
             font-weight: 600;
@@ -51,6 +36,22 @@ body {
         .svg-boxes {
             svg {
                 width: 25px;
+            }
+            .quantity{
+                position: absolute;
+                top: 0;
+                left: 100%;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+                border: 1px solid white;
+                padding:0 0.25rem;
+                font-size: 10px;
+                font-weight: 700;
+                text-shadow: 0 0 1px white;
+                background-color: black;
+                color: white;
+                display: flex;
+                // display: none;
             }
         }
     }
