@@ -2,6 +2,44 @@
 @import "reset";
 
 body {
+    header {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+
+        .menu-icon {
+            svg {
+                width: 25px;
+            }
+        }
+        a.nav-link {
+            font-weight: 600;
+        }
+        form {
+            position: relative;
+            input{
+                border-bottom: 1px solid black !important;
+            }
+            .btn-search {
+                position: absolute;
+                right: 0;
+                font-size: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                
+                i{
+                    color: $contact-hover-text;
+                }
+            }
+
+        }
+        .svg-boxes{
+            svg{
+                width: 25px;
+            }
+        }
+    }
     #carouselExampleIndicators {
         min-height: 100vh;
         display: flex;
@@ -13,9 +51,9 @@ body {
                 height: 5px;
                 border-radius: 50%;
                 width: 5px;
-                background-color: $contact-text;    
+                background-color: $contact-text;
             }
-            .active{
+            .active {
                 background-color: $summer-color;
                 transform: scale(2);
             }
@@ -91,6 +129,7 @@ body {
 
         .big-path {
             position: absolute;
+            z-index: 0;
             width: 700px;
             left: -200px;
             top: -200px;

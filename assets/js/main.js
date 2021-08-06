@@ -18,8 +18,6 @@ $(document).ready(function () {
 
     });
 
-
-
     $('footer .myList>a.btn').each(function (index, element) {
         element = this;
         const plus = $(element).children()[0];
@@ -29,25 +27,53 @@ $(document).ready(function () {
             console.log();
 
             $(element).next().slideToggle("slow");
-          
+
             if (minus.style.opacity == '1') {
                 minus.style.opacity = '0'
                 plus.style.opacity = '1'
                 $(minus).removeClass('mycollapse');
                 $(plus).removeClass('mycollapse');
-                
-               
+
+
             }
             else {
                 plus.style.opacity = '0'
                 minus.style.opacity = '1'
                 $(plus).addClass('mycollapse');
                 $(minus).addClass('mycollapse');
-               
+
             }
         });
     });
 
- 
+    $('#orxan').on('click', function (params) {
+        $('.mymodal').show();
+        $('body').css('overflow', 'hidden');
+        let right = $('.mymodal-dialog').position().left - $('.mymodal-dialog').width() + 'px';
+        $('.mymodal-dialog').css('left', right);
+
+
+    });
+
+    $('.mymodal-header .fa-times').on('click', function (params) {
+        $('.mymodal-dialog').css('left', '100%');
+        $('body').css('overflow', 'scroll');
+
+        setTimeout(() => {
+            $('.mymodal').hide();
+        }, 300);
+
+    });
+
+    $('.mymodal-header a.btn').on('mouseenter', function (params) {
+        $(this).css('color', '#000');
+        $(this).css('transform', 'rotate(90deg)');
+
+    });
+    $('.mymodal-header a.btn').on('mouseleave', function (params) {
+        $(this).css('color', '#adb5bd');
+        $(this).css('transform', 'rotate(0)');
+    });
+
 });
 
