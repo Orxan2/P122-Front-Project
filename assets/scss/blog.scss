@@ -1,0 +1,52 @@
+@import "colors";
+@import "reset";
+
+body {
+    .blog-card {
+        &__footer {
+            &--style {
+                font-size: 12px;
+                text-transform: uppercase;
+                color: $summer-color;
+                letter-spacing: 1px;
+                font-weight: 700;
+                transition: color 0.3s linear;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $head-link-hovered;
+                }
+            }
+            &--muted {
+                font-weight: 700;
+                color: $copyright-color;
+                margin: 0 8px;
+            }
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 2.5;
+            color: $contact-hover-text;
+            transition: color 0.3s linear;
+
+            &:hover {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+    #previos {
+        color: $contact-text;
+        font-weight: 700;
+        transition: color 0.3s linear;
+
+        &:hover {
+            color: $next-hover-color;
+        }
+    }
+    #next {
+        color: $contact-hover-text;
+        font-weight: 700;
+    }
+}

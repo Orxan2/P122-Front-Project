@@ -8,8 +8,24 @@ body {
         background-color: white;
 
         .menu-icon {
+            position: relative;
             svg {
                 width: 25px;
+            }
+            .quantity{
+                position: absolute;
+                top: 5px;
+                left: 80%;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+                border-radius: 1px solid black;
+                padding: 0.25rem;
+                font-size: 10px;
+                font-weight: 700;
+                text-shadow: 0 0 1px white;
+                background-color: black;
+                color: white;
+                display: none;
             }
         }
         a.nav-link {
@@ -17,7 +33,7 @@ body {
         }
         form {
             position: relative;
-            input{
+            input {
                 border-bottom: 1px solid black !important;
             }
             .btn-search {
@@ -27,15 +43,13 @@ body {
                 top: 50%;
                 transform: translateY(-50%);
 
-                
-                i{
+                i {
                     color: $contact-hover-text;
                 }
             }
-
         }
-        .svg-boxes{
-            svg{
+        .svg-boxes {
+            svg {
                 width: 25px;
             }
         }
@@ -45,6 +59,7 @@ body {
         display: flex;
         align-items: center;
         position: relative;
+        overflow: hidden;
 
         .carousel-indicators {
             button {
@@ -325,7 +340,42 @@ body {
                     background-color: $contact-hover-text;
                     color: white;
                 }
+                .addbasket {
+                    cursor: default;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 0;
+                    background: white;
+                    width: 100%;
+                    z-index: 1;
+                    // animation: slide-down .3s;
+                    opacity: 0;
+
+                    & > a {
+                        color: $contact-hover-text;
+                        font-weight: 600;
+                        transition: color 0.3s linear;
+                        &:hover {
+                            text-decoration: underline;
+                            color: #000;
+                        }
+                    }
+                    &__icons {
+                        a {
+                            font-size: 24px;
+                            color: $contact-hover-text;
+                            transition: color 0.3s linear;
+
+                            &:hover {
+                                color: $summer-color;
+                            }
+                        }
+                    }
+                }
             }
+
             &__body {
                 a {
                     margin: 0;
@@ -351,6 +401,7 @@ body {
                     }
 
                     .stars {
+                        // animation: slide-down .3s;
                         opacity: 0;
 
                         span {
@@ -367,6 +418,17 @@ body {
                     }
                 }
             }
+
+            // &:hover {
+            //     .addbasket {
+            //         animation: slide-up 0.3s;
+            //         opacity: 1;
+            //     }
+            //     .stars{
+            //         animation: slide-up 0.3s;
+            //         opacity: 1;
+            //     }
+            // }
         }
     }
     section#summer {
