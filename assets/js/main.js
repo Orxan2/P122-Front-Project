@@ -178,7 +178,7 @@ $(document).ready(function () {
 
 });
 window.addEventListener('scroll',function(params) {
-    console.log(window.scrollY);
+
     $('.myparallax').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
     $('#blog-home').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
     if (window.scrollY >= 600) {
