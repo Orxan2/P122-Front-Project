@@ -152,7 +152,6 @@ body .blog-card__footer--muted {
 body .blog-card__title {
   font-weight: 700;
   font-size: 22px;
-  line-height: 2.5;
   color: #212529;
   transition: color 0.3s linear;
 }
@@ -175,5 +174,56 @@ body #previos:hover {
 body #next {
   color: #212529;
   font-weight: 700;
+}
+
+body section#blog-home {
+  height: 600px;
+  position: relative;
+  background-image: url(../images/blog-home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 150px;
+}
+
+body section#blog-home .blog-slogan p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2;
+  padding: 0 40px;
+}
+
+body section#blog-home .blog-slogan .list-group a {
+  font-weight: 600;
+}
+
+body section#blog-home .blog-slogan .list-group a:not(.disabled) {
+  color: #bcac76;
+  transition: color 0.3s linear;
+}
+
+body section#blog-home .blog-slogan .list-group a:not(.disabled):hover {
+  color: #9a884b;
+  text-decoration: underline;
+}
+
+body section#blog-home .blog-slogan .list-group a.disabled {
+  position: relative;
+  color: #212529;
+}
+
+body .myparallax {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 600px;
+}
+
+body .myparallax img {
+  width: 100%;
 }
 /*# sourceMappingURL=blog.css.map */

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+      
+ 
+
     $('.product-card').each(function (index, element) {
         element = this;
         const stars = element.children[1].children[1].children[1];
@@ -82,19 +85,21 @@ $(document).ready(function () {
 
     //basket
     $('.addbasket > a').each(function (index, element) {
-        element == this;
+        element = this;
 
 
         $(element).on('click', () => {
             let productDatas = JSON.parse(localStorage.getItem('product'));
             let productCount = $('header .quantity');
+            let totalPrice = document.querySelector('.mymodal .total-price');
+            let sum = 0;
             // productCount.css('display', 'block');
 
             let product = {
                 id: index + 1,
                 name: $(element).parent().parent().next().children()[0].innerText,
                 quantity: 1,
-                price: $(element).parent().parent().next().children()[1].children[0].innerText,
+                price: parseFloat($(element).parent().parent().next().children()[1].children[0].innerText.replace("$", "")),
                 path: $(element).parent().parent().children()[0].getAttribute('src')
             }
             if (productDatas == null) {
@@ -119,46 +124,49 @@ $(document).ready(function () {
             console.log(productCount[0]);
             productCount[0].innerHTML = productDatas.length;
 
-          $(productDatas).each(function(index, element) {
-            const modalBody = document.querySelector('.mymodal .mymodal-body');
-            const modalProduct = document.createElement('div');
-            const modalImageBox = document.createElement('div');
-            const modalImage = document.createElement('img');
-            const mymodalText = document.createElement('div');
-            const mymodalTitle = document.createElement('a');
-            const mymodalQuantity = document.createElement('h6');
-            const mymodalPrice = document.createElement('h6');
+            $(productDatas).each(function (index, element) {
+                const modalBody = document.querySelector('.mymodal .mymodal-body');
+                const modalProduct = document.createElement('div');
+                const modalImageBox = document.createElement('div');
+                const modalImage = document.createElement('img');
+                const mymodalText = document.createElement('div');
+                const mymodalTitle = document.createElement('a');
+                const mymodalQuantity = document.createElement('h6');
+                const mymodalPrice = document.createElement('h6');
 
-            $(modalProduct).addClass('mymodal-product');
-            $(modalImageBox).addClass('mymodal-image');
-            $(modalImage).addClass('h-100');
-            $(mymodalText).addClass('mymodal-text');
-            $(mymodalText).addClass('mx-3');
-            $(mymodalTitle).addClass('btn');
-            $(mymodalTitle).addClass('mymodal-title');
-            $(mymodalQuantity).addClass('mymodal-quantity');
-            $(mymodalPrice).addClass('mymodal-price');
+                $(modalProduct).addClass('mymodal-product');
+                $(modalImageBox).addClass('mymodal-image');
+                $(modalImage).addClass('h-100');
+                $(mymodalText).addClass('mymodal-text');
+                $(mymodalText).addClass('mx-3');
+                $(mymodalTitle).addClass('btn');
+                $(mymodalTitle).addClass('mymodal-title');
+                $(mymodalQuantity).addClass('mymodal-quantity');
+                $(mymodalPrice).addClass('mymodal-price');
 
-            mymodalTitle.innerText = element.name;
-            mymodalQuantity.innerText = `quantity : ${element.quantity}`;
-            mymodalPrice.innerText = element.price;
-            $(modalImage).attr('src', element.path);
+                mymodalTitle.innerText = element.name;
+                mymodalQuantity.innerText = `quantity : ${element.quantity}`;
+                mymodalPrice.innerText = `$${element.price.toFixed(2)}`;
+                $(modalImage).attr('src', element.path);
 
 
 
-            $(mymodalTitle).appendTo(mymodalText);
-            $(mymodalQuantity).appendTo(mymodalText);
-            $(mymodalPrice).appendTo(mymodalText);
-            $(modalImage).appendTo(modalImageBox);
+                $(mymodalTitle).appendTo(mymodalText);
+                $(mymodalQuantity).appendTo(mymodalText);
+                $(mymodalPrice).appendTo(mymodalText);
+                $(modalImage).appendTo(modalImageBox);
 
-            $(modalImageBox).appendTo(modalProduct);
-            $(mymodalText).appendTo(modalProduct);
+                $(modalImageBox).appendTo(modalProduct);
+                $(mymodalText).appendTo(modalProduct);
 
-            $(modalProduct).appendTo(modalBody);
+                $(modalProduct).appendTo(modalBody);
 
-          })
+                sum+=element.price;
+            })
 
-          
+            //   console.log(productDatas.);
+            console.log(totalPrice);
+            totalPrice.innerHTML = `$${sum.toFixed(2)}`;
 
 
         });
@@ -169,4 +177,17 @@ $(document).ready(function () {
 
 
 });
+window.addEventListener('scroll',function(params) {
+    console.log(window.scrollY);
+    $('.myparallax').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
+    $('#blog-home').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
+    if (window.scrollY >= 600) {
+        $('.myparallax').css('visibility','hidden');
+    } else {
+        $('.myparallax').css('visibility','visible');
+    }
 
+});
+function myFunc(total, num) {
+    return total + num;
+}

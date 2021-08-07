@@ -26,7 +26,8 @@ body {
         &__title {
             font-weight: 700;
             font-size: 22px;
-            line-height: 2.5;
+            // line-height: 2.5;
+            // margin: 3rem 0;
             color: $contact-hover-text;
             transition: color 0.3s linear;
 
@@ -48,5 +49,60 @@ body {
     #next {
         color: $contact-hover-text;
         font-weight: 700;
+    }
+
+    section#blog-home {
+        height: 600px;
+        position: relative;
+        background-image: url(../images/blog-home.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 150px;
+
+        .blog-slogan {
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 2;
+                padding: 0 40px;
+            }
+            .list-group {
+                a {
+                    font-weight: 600;
+                }
+
+                a:not(.disabled) {
+                    color: $summer-color;
+                    transition: color 0.3s linear;
+
+                    &:hover {
+                        color: $head-link-hovered;
+                        text-decoration: underline;
+                    }
+                }
+                a.disabled {
+                    position: relative;
+                    color: $contact-hover-text;
+                    
+                }
+            }
+        }
+    }
+
+    .myparallax {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // width: 100%;
+        height: 600px;
+
+        img {
+            width: 100%;
+        }
     }
 }
