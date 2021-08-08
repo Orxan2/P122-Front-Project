@@ -139,6 +139,11 @@ a {
   background-color: #877f64;
 }
 
+.mytext {
+  font-weight: 600;
+  color: #868e96;
+}
+
 .about-warkala__title {
   letter-spacing: 7px;
   text-transform: uppercase;
@@ -190,5 +195,34 @@ a {
 
 .letter-space4 {
   letter-spacing: 4px;
+}
+
+.owl-nav button {
+  display: none;
+}
+
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.owl-dots button.owl-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transition: all .2s linear;
+  display: none;
+  background: #ccc;
+  margin: 0 3px;
+}
+
+.owl-dots button.owl-dot.active {
+  background-color: #bcac76;
+  width: 8px;
+  height: 10px;
+}
+
+.owl-dots button.owl-dot:focus {
+  outline: none;
 }
 /*# sourceMappingURL=about.css.map */

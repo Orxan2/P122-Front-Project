@@ -1,6 +1,6 @@
 $(document).ready(function () {
-      
- 
+
+
 
     $('.product-card').each(function (index, element) {
         element = this;
@@ -161,7 +161,7 @@ $(document).ready(function () {
 
                 $(modalProduct).appendTo(modalBody);
 
-                sum+=element.price;
+                sum += element.price;
             })
 
             //   console.log(productDatas.);
@@ -174,46 +174,111 @@ $(document).ready(function () {
     });
 
     // parallax 
-    window.addEventListener('scroll',function(params) {
+    window.addEventListener('scroll', function (params) {
 
-        $('.myparallax').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
-        $('#blog-home').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
+        $('.myparallax').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
+        $('#blog-home').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
         if (window.scrollY >= 600) {
-            $('.myparallax').css('visibility','hidden');
+            $('.myparallax').css('visibility', 'hidden');
         } else {
-            $('.myparallax').css('visibility','visible');
+            $('.myparallax').css('visibility', 'visible');
         }
-    
+
     });
 
     // products animation
-    window.addEventListener('scroll',function(params) {
+    window.addEventListener('scroll', function (params) {
 
         $('section#products .product-card').each(function (index, element) {
-          element = this;
-          
-          if (window.scrollY >= $(element).offset().top - $(element).height()) {
-            $(element).css('animation-play-state','unset');
-        } 
-      });
+            element = this;
 
-      $('section#blog-cards .blog-card').each(function (index, element) {
-        element = this;
-        
-        if (window.scrollY >= $(element).offset().top - $(element).height()*1.5) {
-          $(element).css('animation-play-state','unset');
-      } 
-    });
-       
-       
-    
+            if (window.scrollY >= $(element).offset().top - $(element).height()) {
+                $(element).css('animation-play-state', 'unset');
+            }
+        });
+
+        $('section#blog-cards .blog-card').each(function (index, element) {
+            element = this;
+
+            if (window.scrollY >= $(element).offset().top - $(element).height() * 1.5) {
+                $(element).css('animation-play-state', 'unset');
+            }
+        });
+
+
+
     });
 
     // time plugin
     var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
     var countdown = new Countdown('countdown', deadline);
 
+
+   
+
+    jQuery("#carousel").owlCarousel({
+        autoplay: true,
+        rewind: true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        margin: 20,
+        loop:true,
+        responsiveClass: true,
+        autoHeight: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 800,
+        nav: true,
+        responsive: {
+            0: {
+                items: 6
+            },
+
+            768: {
+                items: 2
+            },
+
+            992: {
+                items: 3
+            },
+
+            1200: {
+                items: 5
+            }
+        }
+    });
+
+    setInterval(() => {
+
+        $($('.owl-dots button.owl-dot')).each(function (index, element) {
+            element = this;
+            $(element).css('display', 'none');
+        });
+
+        $('.owl-dots button.owl-dot.active').css('display','inline-block');
+        $('.owl-dots button.owl-dot.active').css('width','8px');
+        $('.owl-dots button.owl-dot.active').css('height','8px');
+
+        $('.owl-dots button.owl-dot.active').next().css('display', 'inline-block');
+        $('.owl-dots button.owl-dot.active').next().css('width', '5px');
+        $('.owl-dots button.owl-dot.active').next().css('height', '5px');
+
+        $('.owl-dots button.owl-dot.active').next().next().css('display', 'inline-block');
+        $('.owl-dots button.owl-dot.active').next().next().css('width', '3px');
+        $('.owl-dots button.owl-dot.active').next().next().css('height', '3px');
+
+        $('.owl-dots button.owl-dot.active').prev().css('display', 'inline-block');
+        $('.owl-dots button.owl-dot.active').prev().css('width', '5px');
+        $('.owl-dots button.owl-dot.active').prev().css('height', '5px');
+
+        $('.owl-dots button.owl-dot.active').prev().prev().css('display', 'inline-block');
+        $('.owl-dots button.owl-dot.active').prev().prev().css('width', '3px');
+        $('.owl-dots button.owl-dot.active').prev().prev().css('height', '3px');
+    }, 100);
+
+
+
 })
 function myFunc(total, num) {
     return total + num;
 }
+

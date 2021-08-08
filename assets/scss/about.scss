@@ -9,6 +9,10 @@ background-color: $about-muted;
     width: 50%;
     background-color: $fresh-layout;
 }
+.mytext{
+    font-weight: 600;
+    color: $contact-text;
+}
 .about-warkala {
     &__title {
         letter-spacing: 7px;                
@@ -57,3 +61,30 @@ background-color: $about-muted;
 .letter-space4{
     letter-spacing: 4px;
 }
+
+.owl-nav button {
+    display: none;
+  }
+
+  
+  .owl-dots {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .owl-dots button.owl-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transition: all .2s linear;
+    display: none;
+    background: #ccc;
+    margin: 0 3px;
+  }
+  .owl-dots button.owl-dot.active {
+    background-color: $summer-color;
+    width: 8px;
+    height: 10px;
+  }
+  .owl-dots button.owl-dot:focus {
+    outline: none;
+  }
