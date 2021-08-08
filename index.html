@@ -30,7 +30,7 @@
                         <h5 class="total fw-bold">Subtotal:</h5>
                         <h5 class="total-price fw-bold">$0.00</h5>
                     </div>
-                    <a href="" class="btn btn-outline-success my-2 w-100">View Cart</a>
+                    <a href="basket.html" class="btn btn-outline-success my-2 w-100">View Cart</a>
                     <a href="" class="btn btn-outline-success my-2 w-100">Checkout</a>
                 </div>
             </div>
@@ -284,7 +284,7 @@
         <div class="container">
             <div class="row py-4">
 
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
 
                     <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" id="blob-shape-2">
                         <path
@@ -300,12 +300,28 @@
                             <span class="ms-2">$79.00</span>
                         </div>
                         <p class="discount__percent p-3 rounded">$50 off</p>
+                        <div class="discount__time timer bg-white px-5 py-4 mb-4" id="countdown">
+                            <div class="row justify-content-between align-content-start">
+                              <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                                <h6 class="h4 mb-2 days fw-bold">14</h6><span class="text-muted">days</span>
+                              </div>
+                              <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                                <h6 class="h4 mb-2 hours fw-bold">22</h6><span class="text-muted">hours</span>
+                              </div>
+                              <div class="col-6 col-sm-3 text-center">
+                                <h6 class="h4 mb-2 minutes fw-bold">41</h6><span class="text-muted">minutes</span>
+                              </div>
+                              <div class="col-6 col-sm-3 text-center">
+                                <h6 class="h4 mb-2 seconds fw-bold">30</h6><span class="text-muted">seconds</span>
+                              </div>
+                            </div>
+                          </div>
                         <a href="" class="btn discount__btn">shop now</a>
                     </div>
 
                 </div>
 
-                <div class="col-12 col-lg-8 py-5 py-lg-0">
+                <div class="col-12 col-lg-6 py-5 py-lg-0">
                     <div class="image-box d-flex justify-content-center">
                         <img src="assets/images/chair2-transparent.png" width="300" height="450" class=""
                             alt="chair-transparent" />
@@ -722,6 +738,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/countdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
@@ -735,3 +752,4 @@
 </body>
 
 </html>
+@

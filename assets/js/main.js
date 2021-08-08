@@ -173,21 +173,47 @@ $(document).ready(function () {
 
     });
 
-    console.log();
+    // parallax 
+    window.addEventListener('scroll',function(params) {
 
+        $('.myparallax').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
+        $('#blog-home').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
+        if (window.scrollY >= 600) {
+            $('.myparallax').css('visibility','hidden');
+        } else {
+            $('.myparallax').css('visibility','visible');
+        }
+    
+    });
 
-});
-window.addEventListener('scroll',function(params) {
+    // products animation
+    window.addEventListener('scroll',function(params) {
 
-    $('.myparallax').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
-    $('#blog-home').css('transform',`translate3d(0,${-window.scrollY}px,0)`);      
-    if (window.scrollY >= 600) {
-        $('.myparallax').css('visibility','hidden');
-    } else {
-        $('.myparallax').css('visibility','visible');
-    }
+        $('section#products .product-card').each(function (index, element) {
+          element = this;
+          
+          if (window.scrollY >= $(element).offset().top - $(element).height()) {
+            $(element).css('animation-play-state','unset');
+        } 
+      });
 
-});
+      $('section#blog-cards .blog-card').each(function (index, element) {
+        element = this;
+        
+        if (window.scrollY >= $(element).offset().top - $(element).height()*1.5) {
+          $(element).css('animation-play-state','unset');
+      } 
+    });
+       
+       
+    
+    });
+
+    // time plugin
+    var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+    var countdown = new Countdown('countdown', deadline);
+
+})
 function myFunc(total, num) {
     return total + num;
 }

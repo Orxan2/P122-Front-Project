@@ -3,6 +3,9 @@
 
 body {
     .blog-card {
+        animation: zoom-in .5s ease-out;
+        animation-play-state: paused;
+        
         &__footer {
             &--style {
                 font-size: 12px;

@@ -129,6 +129,11 @@ a {
   font-size: 14px;
 }
 
+body .blog-card {
+  animation: zoom-in .5s ease-out;
+  animation-play-state: paused;
+}
+
 body .blog-card__footer--style {
   font-size: 12px;
   text-transform: uppercase;

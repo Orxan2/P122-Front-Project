@@ -377,6 +377,12 @@ body section#time .row .discount__percent {
   text-shadow: 0 0 2px white;
 }
 
+body section#time .row .discount__time {
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+}
+
 body section#time .row .discount__btn {
   text-transform: uppercase;
   font-weight: 700;
@@ -425,6 +431,8 @@ body section#products .head-link:hover {
 
 body section#products .product-card {
   cursor: pointer;
+  animation: zoom-in .5s ease-out;
+  animation-play-state: paused;
 }
 
 body section#products .product-card__img {
@@ -778,6 +786,23 @@ body footer .site-rules li a:hover {
   to {
     opacity: 0;
     transform: translateY(50%);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  section#time .discount__time {
+    height: 200px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
