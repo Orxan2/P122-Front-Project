@@ -1,0 +1,33 @@
+@import "colors";
+@import "reset";
+
+.title-line{
+    height: 1px;
+    width: 50%;
+    background-color: $fresh-layout;
+}
+.about-warkala {
+    &__title {
+        letter-spacing: 7px;                
+        text-transform: uppercase;                
+        font-weight: 700;
+    }
+    &__heading {
+    }
+    &__text {
+        font-weight: 600;
+    }
+    &--green{
+        color: $summer-color;
+    }
+    &--muted{
+        color: $contact-text;
+    }          
+    &--f20{
+        font-size: 20px;
+    }
+    &--f30{
+        font-size: 30px;
+    }
+
+}
