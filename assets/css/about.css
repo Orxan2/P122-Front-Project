@@ -129,6 +129,10 @@ a {
   font-size: 14px;
 }
 
+.bg-muted {
+  background-color: #f8f9fa;
+}
+
 .title-line {
   height: 1px;
   width: 50%;
@@ -153,11 +157,38 @@ a {
   color: #868e96;
 }
 
+.about-warkala--f17 {
+  font-size: 17px;
+}
+
 .about-warkala--f20 {
   font-size: 20px;
 }
 
 .about-warkala--f30 {
   font-size: 30px;
+}
+
+.myblockquote {
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.8;
+  position: relative;
+}
+
+.myblockquote::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  left: 0;
+  top: -12px;
+  background-image: url(../images/blockquote.svg);
+  color: black;
+}
+
+.letter-space4 {
+  letter-spacing: 4px;
 }
 /*# sourceMappingURL=about.css.map */

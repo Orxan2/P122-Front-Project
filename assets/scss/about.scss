@@ -1,5 +1,8 @@
 @import "colors";
 @import "reset";
+.bg-muted{
+background-color: $about-muted;
+}
 
 .title-line{
     height: 1px;
@@ -12,8 +15,7 @@
         text-transform: uppercase;                
         font-weight: 700;
     }
-    &__heading {
-    }
+    
     &__text {
         font-weight: 600;
     }
@@ -22,7 +24,10 @@
     }
     &--muted{
         color: $contact-text;
-    }          
+    }   
+    &--f17{
+        font-size: 17px;
+    }    
     &--f20{
         font-size: 20px;
     }
@@ -30,4 +35,25 @@
         font-size: 30px;
     }
 
+}
+.myblockquote{
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.8;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        z-index: -1;
+        left: 0;
+        top: -12px;
+        background-image: url(../images/blockquote.svg);
+        color: black;
+    }
+}
+.letter-space4{
+    letter-spacing: 4px;
 }
