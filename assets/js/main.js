@@ -176,8 +176,8 @@ $(document).ready(function () {
     // parallax 
     window.addEventListener('scroll', function (params) {
 
-        $('.myparallax').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
-        $('#blog-home').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
+        // $('.myparallax').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
+        $('body').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
         if (window.scrollY >= 600) {
             $('.myparallax').css('visibility', 'hidden');
         } else {
@@ -216,36 +216,36 @@ $(document).ready(function () {
 
    
 
-    jQuery("#carousel").owlCarousel({
-        autoplay: true,
-        rewind: true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        margin: 20,
-        loop:true,
-        responsiveClass: true,
-        autoHeight: true,
-        autoplayTimeout: 5000,
-        smartSpeed: 800,
-        nav: true,
-        responsive: {
-            0: {
-                items: 6
-            },
+    // $("#carousel").owlCarousel({
+    //     autoplay: true,
+    //     rewind: true,
+    //     animateOut: 'fadeOut',
+    //     animateIn: 'fadeIn',
+    //     margin: 20,
+    //     loop:true,
+    //     responsiveClass: true,
+    //     autoHeight: true,
+    //     autoplayTimeout: 5000,
+    //     smartSpeed: 800,
+    //     nav: true,
+    //     responsive: {
+    //         0: {
+    //             items: 6
+    //         },
 
-            768: {
-                items: 2
-            },
+    //         768: {
+    //             items: 2
+    //         },
 
-            992: {
-                items: 3
-            },
+    //         992: {
+    //             items: 3
+    //         },
 
-            1200: {
-                items: 5
-            }
-        }
-    });
+    //         1200: {
+    //             items: 5
+    //         }
+    //     }
+    // });
 
     setInterval(() => {
 
@@ -275,7 +275,13 @@ $(document).ready(function () {
         $('.owl-dots button.owl-dot.active').prev().prev().css('height', '3px');
     }, 100);
 
+//header icon click
+$('header .menu-icon').on('click',()=>{
+    $('header .navbar-collapse').css('flex-direction','column');
+    $('header .navbar-collapse').slideToggle();
+    console.log('ola');
 
+});
 
 })
 function myFunc(total, num) {

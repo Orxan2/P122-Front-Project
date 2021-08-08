@@ -3,9 +3,8 @@
 
 body {
     header {
-        position: relative;
+        // position: relative;       
         z-index: 1;
-        background-color: white;
 
         .menu-icon {
 
@@ -60,6 +59,7 @@ body {
         align-items: center;
         position: relative;
         overflow: hidden;
+        padding: 100px 0;
 
         .carousel-indicators {
             button {
