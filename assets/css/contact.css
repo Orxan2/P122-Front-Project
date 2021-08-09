@@ -168,4 +168,9 @@ section#contact-home .contact-slogan .list-group a.disabled {
   position: relative;
   color: #212529;
 }
+
+.contact-info p {
+  color: #868e96;
+  font-weight: 600;
+}
 /*# sourceMappingURL=contact.css.map */
