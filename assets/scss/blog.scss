@@ -57,7 +57,7 @@ body {
     section#blog-home {
         height: 575px;
         position: relative;
-        background-image: url(../images/blog-home.jpg);
+        // background-image: url(../images/blog-home.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -91,6 +91,22 @@ body {
                     
                 }
             }
+        }
+    }
+
+    .myparallax {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // width: 100%;
+        height: 575px;
+
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 }

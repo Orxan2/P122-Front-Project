@@ -176,13 +176,10 @@ $(document).ready(function () {
     // parallax 
     window.addEventListener('scroll', function (params) {
 
-        // $('.myparallax').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
-        $('body').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
-        if (window.scrollY >= 600) {
-            $('.myparallax').css('visibility', 'hidden');
-        } else {
-            $('.myparallax').css('visibility', 'visible');
-        }
+        $('.myparallax').css('transform', `translate3d(0,${-window.scrollY}px,0)`);
+        $('.myparallax img').css('transform', `translate3d(0,${window.scrollY/2}px,0)`);
+        
+       
 
     });
 

@@ -1,0 +1,48 @@
+@import "colors";
+@import "reset";
+
+.myparallax {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // width: 100%;
+    height: 600px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+  section#contact-home{
+    height: 600px;
+    position: relative;
+    padding-top: 200px;
+
+    .contact-slogan {
+
+        .list-group {
+            a {
+                font-weight: 600;
+            }
+
+            a:not(.disabled) {
+                color: $summer-color;
+                transition: color 0.3s linear;
+
+                &:hover {
+                    color: $head-link-hovered;
+                    text-decoration: underline;
+                }
+            }
+            a.disabled {
+                position: relative;
+                color: $contact-hover-text;
+                
+            }
+        }
+    }
+}
