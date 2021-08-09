@@ -173,4 +173,48 @@ section#contact-home .contact-slogan .list-group a.disabled {
   color: #868e96;
   font-weight: 600;
 }
+
+section#contact-us .social-links a {
+  color: #bcac76;
+  font-size: 30px;
+  transition: color 0.5s linear;
+}
+
+section#contact-us .social-links a :hover {
+  color: #9a884b;
+}
+
+section#contact-us .f-100 {
+  font-size: 100px;
+}
+
+section#contact-us form .form-control {
+  border: 0;
+  border-bottom: 1px solid #ced4da;
+  transition: border .4s linear;
+  border-radius: 0;
+}
+
+section#contact-us form .form-control:focus {
+  box-shadow: none;
+}
+
+section#contact-us form .form-control:hover {
+  border-color: black;
+}
+
+section#contact-us form a {
+  letter-spacing: 3px;
+  color: #bcac76;
+  border: 1px solid #bcac76;
+  border-radius: 0;
+  transition: all .3s linear;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+section#contact-us form a:hover {
+  background-color: #bcac76;
+  color: black;
+}
 /*# sourceMappingURL=contact.css.map */

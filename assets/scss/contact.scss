@@ -17,13 +17,12 @@
     }
 }
 
-  section#contact-home{
+section#contact-home {
     height: 600px;
     position: relative;
     padding-top: 200px;
 
     .contact-slogan {
-
         .list-group {
             a {
                 font-weight: 600;
@@ -41,14 +40,58 @@
             a.disabled {
                 position: relative;
                 color: $contact-hover-text;
-                
             }
         }
     }
 }
-.contact-info{
-    p{
+.contact-info {
+    p {
         color: $contact-text;
         font-weight: 600;
+    }
+}
+section#contact-us {
+    .social-links {
+        a {
+            color: $summer-color;
+            font-size: 30px;
+            transition: color 0.5s linear;            
+
+            :hover {
+                color: $head-link-hovered;
+            }
+        }
+    }
+    .f-100 {
+        font-size: 100px;
+    }
+    form {
+        .form-control {            
+            border: 0;
+            border-bottom: 1px solid $contact-border-color;
+            transition: border .4s linear;
+            border-radius: 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover{
+                border-color: black;
+            }
+        }
+        a{
+            letter-spacing: 3px;
+            color: $summer-color;
+            border: 1px solid $summer-color;
+            border-radius: 0;
+            transition: all .3s linear;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &:hover{
+                background-color: $summer-color;
+                color: black;
+            }
+        }
     }
 }
