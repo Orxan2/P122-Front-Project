@@ -13,7 +13,10 @@ a {
 .mycollapse {
     transform: rotate(0deg) !important;
 }
-
+.bg-muted{
+    background-color: $about-muted;
+    }
+    
 .mymodal {
     transition: all 0.15s linear;    
     z-index: 1000;

@@ -95,3 +95,21 @@ section#contact-us {
         }
     }
 }
+section#location{
+    overflow: hidden;
+    .stores{
+        &__heading{
+            color: $contact-text;
+            font-weight: 700;
+        }
+        &__city{
+           font-size: 30px;
+           font-weight: 700;
+        }
+        &__text{
+            font-weight: 600;
+            padding: 0 4px;
+        }
+    }
+}
+

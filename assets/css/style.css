@@ -17,6 +17,10 @@ a {
   transform: rotate(0deg) !important;
 }
 
+.bg-muted {
+  background-color: #f8f9fa;
+}
+
 .mymodal {
   transition: all 0.15s linear;
   z-index: 1000;

@@ -17,6 +17,10 @@ a {
   transform: rotate(0deg) !important;
 }
 
+.bg-muted {
+  background-color: #f8f9fa;
+}
+
 .mymodal {
   transition: all 0.15s linear;
   z-index: 1000;
@@ -216,5 +220,24 @@ section#contact-us form a {
 section#contact-us form a:hover {
   background-color: #bcac76;
   color: black;
+}
+
+section#location {
+  overflow: hidden;
+}
+
+section#location .stores__heading {
+  color: #868e96;
+  font-weight: 700;
+}
+
+section#location .stores__city {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+section#location .stores__text {
+  font-weight: 600;
+  padding: 0 4px;
 }
 /*# sourceMappingURL=contact.css.map */
