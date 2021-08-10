@@ -509,9 +509,11 @@ body {
         align-items: center;
 
         .icon {
-            i {
-                font-size: 30px;
-                color: $contact-letter-color;
+            svg {
+                width: 30px;
+                height: 30px;
+                stroke-width: 3px;
+                // color: $contact-letter-color;
             }
         }
         .text {

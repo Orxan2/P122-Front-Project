@@ -627,9 +627,10 @@ body section#info {
   align-items: center;
 }
 
-body section#info .icon i {
-  font-size: 30px;
-  color: #495057;
+body section#info .icon svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 3px;
 }
 
 body section#info .text p {

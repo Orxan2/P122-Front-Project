@@ -205,6 +205,38 @@ $(document).ready(function () {
 
 
     });  
+//carousel 
+
+jQuery("#carousel").owlCarousel({
+    autoplay: true,
+    rewind: true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    margin: 20,
+    loop:true,
+    responsiveClass: true,
+    autoHeight: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800,
+    nav: true,
+    responsive: {
+        0: {
+            items: 6
+        },
+
+        768: {
+            items: 2
+        },
+
+        992: {
+            items: 3
+        },
+
+        1200: {
+            items: 5
+        }
+    }
+});
 
 
     setInterval(() => {
