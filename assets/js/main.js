@@ -112,7 +112,7 @@ $(document).ready(function () {
             else {
 
                 if (productDatas.find(x => x.id == (index + 1))) {
-                    alert('məhsul artıq kartda var');
+                    alert('the product is already on the cart');
                     return;
                 }
                 else {
@@ -204,45 +204,8 @@ $(document).ready(function () {
 
 
 
-    });
+    });  
 
-    // time plugin
-    var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-    var countdown = new Countdown('countdown', deadline);
-
-
-   
-
-    // $("#carousel").owlCarousel({
-    //     autoplay: true,
-    //     rewind: true,
-    //     animateOut: 'fadeOut',
-    //     animateIn: 'fadeIn',
-    //     margin: 20,
-    //     loop:true,
-    //     responsiveClass: true,
-    //     autoHeight: true,
-    //     autoplayTimeout: 5000,
-    //     smartSpeed: 800,
-    //     nav: true,
-    //     responsive: {
-    //         0: {
-    //             items: 6
-    //         },
-
-    //         768: {
-    //             items: 2
-    //         },
-
-    //         992: {
-    //             items: 3
-    //         },
-
-    //         1200: {
-    //             items: 5
-    //         }
-    //     }
-    // });
 
     setInterval(() => {
 
@@ -281,7 +244,4 @@ $('header .menu-icon').on('click',()=>{
 });
 
 })
-function myFunc(total, num) {
-    return total + num;
-}
 

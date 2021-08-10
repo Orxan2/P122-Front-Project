@@ -224,9 +224,22 @@ $(document).ready(function () {
         });
 
         localStorage.setItem('product',JSON.stringify(products));
-        document.location.reload();
-        });
 
+        document.location.reload();      
+       
+        });
+        console.log(products);
+        let totalCount =0;
+        let totalType =products.length;
+        let total =0;
+
+        products.forEach(element =>{
+            totalCount += element.quantity;           
+           total += element.quantity*element.price;
+        } );
+        document.querySelector('#totalType').innerText = `${totalType}`;
+        document.querySelector('#totalCount').innerText = `${totalCount}`;
+        document.querySelector('#totalPrice').innerText = `$${(total+10).toFixed(2)}`;
         $('.product-cart').append(productItem);
         
         
@@ -234,3 +247,6 @@ $(document).ready(function () {
     
    
 });
+function myFunc(total, num) {
+    return total + num;
+}

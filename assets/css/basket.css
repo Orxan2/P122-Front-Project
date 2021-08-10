@@ -155,6 +155,13 @@ a {
   color: #212529;
 }
 
+.product-cart {
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .product-cart__item {
   border-bottom: 1px solid #ced4da;
 }
@@ -220,6 +227,10 @@ a {
   height: 40px;
 }
 
+.product-cart__item:last-of-type {
+  border: 0;
+}
+
 .basket-operations a {
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -245,5 +256,10 @@ a {
 
 .basket-operations a:hover {
   text-decoration: underline;
+}
+
+.check {
+  box-shadow: 0 0 10px #ced4da;
+  padding: 0;
 }
 /*# sourceMappingURL=basket.css.map */
