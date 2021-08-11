@@ -108,17 +108,25 @@ body{
         .stores{
             &__heading{
                 color: $contact-text;
-                font-weight: 700;
             }
             &__city{
                font-size: 30px;
-               font-weight: 700;
             }
             &__text{
-                font-weight: 600;
                 padding: 0 4px;
             }
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    section#contact-us {
+       
+        .f-100 {
+            font-size: 60px !important;
+        }
+      
+    }
+}
+
 

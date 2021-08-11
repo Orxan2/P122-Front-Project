@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -167,6 +169,10 @@ a {
   font-size: 14px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body header {
   position: absolute;
   width: 100%;
@@ -186,6 +192,17 @@ body header form {
 }
 
 body header form input {
+  border: 0 !important;
+  border-radius: 0 !important;
+  transition: border .3s linear !important;
+  border-bottom: 1px solid #ced4da !important;
+}
+
+body header form input:focus {
+  box-shadow: none !important;
+}
+
+body header form input:hover {
   border-bottom: 1px solid black !important;
 }
 
@@ -875,14 +892,41 @@ body footer .site-rules li a:hover {
 }
 
 @media only screen and (max-width: 575px) {
+  #carouselExampleIndicators .background-container {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
   section#time .discount__time {
     height: 200px !important;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  #carouselExampleIndicators .content {
+    width: 100% !important;
+  }
+  #carouselExampleIndicators .content .shop-title {
+    font-size: 36px !important;
+    font-weight: 400 !important;
+  }
+  #carouselExampleIndicators .background-container img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #carouselExampleIndicators .background-container svg {
+    top: 0 !important;
+    right: -50% !important;
+  }
   section#summer .slogan__heading {
     font-size: 45px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #carouselExampleIndicators .background-container svg {
+    top: 0 !important;
+    right: auto !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

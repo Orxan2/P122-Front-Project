@@ -2,6 +2,7 @@
 @import "reset";
 
 body {
+    overflow-x: hidden;
     header {
         position: absolute;
         width: 100%;
@@ -18,7 +19,17 @@ body {
         form {
             position: relative;
             input {
-                border-bottom: 1px solid black !important;
+                border: 0 !important;
+                border-radius: 0 !important;
+                transition: border .3s linear !important;
+                border-bottom: 1px solid $contact-border-color !important;
+
+                &:focus{
+                    box-shadow: none !important;
+                }
+                &:hover{
+                    border-bottom: 1px solid black !important;
+                }
             }
             .btn-search {
                 position: absolute;
@@ -723,15 +734,48 @@ body {
 }
 
 @media only screen and (max-width: 575px) {
-    section#time {
-        .discount {
-            &__time {
-                height: 200px !important;
+    #carouselExampleIndicators {    
+
+        
+             .background-container {
+                 width: 100% !important;
+                 display: flex !important;
+                 justify-content: center !important;             
+             }
+         }    
+         section#time {
+            .discount {
+                &__time {
+                    height: 200px !important;
+                }
             }
-        }
-    }
-}
-@media only screen and (max-width: 768px) {
+        }  
+     }
+   
+
+@media only screen and (max-width: 767px) {  
+    #carouselExampleIndicators {     
+
+        .content {
+                 width: 100% !important; 
+               
+                 .shop-title {
+                     font-size: 36px !important;
+                     font-weight: 400 !important;
+                 }               
+             }  
+             .background-container {
+               img{
+                   width: 100% !important;
+                   height: 100% !important;
+               }     
+               svg {    
+                   top: 0 !important;           
+                right: -50% !important;
+               
+            }     
+            }          
+         }   
     section#summer {
         .slogan {
             &__heading {
@@ -739,4 +783,20 @@ body {
             }
         }
     }
+}
+@media only screen and (max-width: 991px) {  
+    #carouselExampleIndicators {     
+
+        
+             .background-container {
+                 
+               svg {  
+                     
+                   top: 0 !important;           
+                right: auto !important;
+               
+            }     
+            }          
+         }   
+  
 }

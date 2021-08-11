@@ -52,7 +52,7 @@ $(document).ready(function () {
         });
     });
 
-    $('#orxan').on('click', function (params) {
+    $('#open').on('click', function (params) {
         $('.mymodal').show();
         $('body').css('overflow', 'hidden');
         let right = $('.mymodal-dialog').position().left - $('.mymodal-dialog').width() + 'px';
