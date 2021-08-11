@@ -1,9 +1,12 @@
-@import "colors";
-@import "reset";
+// @import 'common/colors';
+// @import 'common/reset';
+// @import 'common/animations';
+@import "common/layout";
+
 
 body{
     header{
-        position: relative;        
+        // position: relative;        
     }
     .title-line{
         height: 1px;

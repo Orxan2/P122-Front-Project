@@ -126,6 +126,8 @@ $(document).ready(function () {
             console.log(productCount[0]);
             productCount[0].innerHTML = productDatas.length;
 
+           
+
             $(productDatas).each(function (index, element) {
                 const modalBody = document.querySelector('.mymodal .mymodal-body');
                 const modalProduct = document.createElement('div');
@@ -161,7 +163,13 @@ $(document).ready(function () {
                 $(modalImageBox).appendTo(modalProduct);
                 $(mymodalText).appendTo(modalProduct);
 
-                $(modalProduct).appendTo(modalBody);
+                if (index==0) {
+                    $(modalBody).html(modalProduct);
+                } else {
+                    $(modalProduct).appendTo(modalBody);
+                }
+               
+               
 
                 sum += element.price;
             })
@@ -234,6 +242,7 @@ $('header .menu-icon').on('click',function(){
         }         
              
  }, 150);
+  
 
  }
     

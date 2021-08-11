@@ -1,7 +1,10 @@
-@import "colors";
-@import "reset";
+// @import 'common/colors';
+// @import 'common/reset';
+// @import 'common/animations';
+@import "common/layout";
 
-body {
+
+body{
     header{
         position: absolute;
         background-color: transparent;
@@ -19,7 +22,7 @@ body {
                 letter-spacing: 1px;
                 font-weight: 700;
                 transition: color 0.3s linear;
-
+    
                 &:hover {
                     text-decoration: underline;
                     color: $head-link-hovered;
@@ -38,7 +41,7 @@ body {
             // margin: 3rem 0;
             color: $contact-hover-text;
             transition: color 0.3s linear;
-
+    
             &:hover {
                 text-decoration: underline;
                 color: black;
@@ -49,7 +52,7 @@ body {
         color: $contact-text;
         font-weight: 700;
         transition: color 0.3s linear;
-
+    
         &:hover {
             color: $next-hover-color;
         }
@@ -58,7 +61,7 @@ body {
         color: $contact-hover-text;
         font-weight: 700;
     }
-
+    
     section#blog-home {
         height: 575px;
         position: relative;
@@ -68,7 +71,7 @@ body {
         background-attachment: fixed;
         background-size: cover;
         padding-top: 150px;
-
+    
         .blog-slogan {
             p {
                 font-size: 18px;
@@ -80,11 +83,11 @@ body {
                 a {
                     font-weight: 600;
                 }
-
+    
                 a:not(.disabled) {
                     color: $summer-color;
                     transition: color 0.3s linear;
-
+    
                     &:hover {
                         color: $head-link-hovered;
                         text-decoration: underline;
@@ -98,7 +101,7 @@ body {
             }
         }
     }
-
+    
     .myparallax {
         position: fixed;
         overflow: hidden;
@@ -108,7 +111,7 @@ body {
         left: 0;
         // width: 100%;
         height: 575px;
-
+    
         img {
             width: 100%;
             height: 100%;

@@ -2,12 +2,13 @@
   "name": "p122-front-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "css": "node-sass assets/scss/style.scss -o assets/css",
-    "css:watch": "npm run css && node-sass --output-style compressed assets/scss/style.scss -wo assets/css"
-  },
+  "main": "index.js", 
 
+  "scripts": {
+    "css": "node-sass assets/scss -o assets/css",
+    "css:watch": "npm run css && node-sass --output-style compressed assets/scss/about.scss -wo assets/css/index.css",
+    "css:watch": "npm run css && node-sass --output-style compressed assets/scss/about.scss -wo assets/css/about.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Orxan2/P122-Front-Project.git"
