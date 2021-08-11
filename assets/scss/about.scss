@@ -1,87 +1,92 @@
 @import "colors";
 @import "reset";
 
-.title-line{
-    height: 1px;
-    width: 50%;
-    background-color: $fresh-layout;
-}
-.mytext{
-    font-weight: 600;
-    color: $contact-text;
-}
-.about-warkala {
-    &__title {
-        letter-spacing: 7px;                
-        text-transform: uppercase;                
-        font-weight: 700;
+body{
+    header{
+        position: relative;        
+    }
+    .title-line{
+        height: 1px;
+        width: 50%;
+        background-color: $fresh-layout;
+    }
+    .mytext{
+        font-weight: 600;
+        color: $contact-text;
+    }
+    .about-warkala {
+        &__title {
+            letter-spacing: 7px;                
+            text-transform: uppercase;                
+            font-weight: 700;
+        }
+        
+        &__text {
+            font-weight: 600;
+        }
+        &--green{
+            color: $summer-color;
+        }
+        &--muted{
+            color: $contact-text;
+        }   
+        &--f17{
+            font-size: 17px;
+        }    
+        &--f20{
+            font-size: 20px;
+        }
+        &--f30{
+            font-size: 30px;
+        }
+    
+    }
+    .myblockquote{
+        font-size: 29px;
+        font-weight: 400;
+        line-height: 1.8;
+        position: relative;
+    
+        &::before{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: -1;
+            left: 0;
+            top: -12px;
+            background-image: url(../images/blockquote.svg);
+            color: black;
+        }
+    }
+    .letter-space4{
+        letter-spacing: 4px;
     }
     
-    &__text {
-        font-weight: 600;
-    }
-    &--green{
-        color: $summer-color;
-    }
-    &--muted{
-        color: $contact-text;
-    }   
-    &--f17{
-        font-size: 17px;
-    }    
-    &--f20{
-        font-size: 20px;
-    }
-    &--f30{
-        font-size: 30px;
-    }
-
+    .owl-nav button {
+        display: none;
+      }
+      
+      .owl-dots {
+        text-align: center;
+        padding-top: 15px;
+      }
+      .owl-dots button.owl-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        transition: all .2s linear;
+        display: none;
+        background: #ccc;
+        margin: 0 3px;
+      }
+      .owl-dots button.owl-dot.active {
+        background-color: $summer-color;
+        width: 8px;
+        height: 10px;
+      }
+      .owl-dots button.owl-dot:focus {
+        outline: none;
+      }
+    
 }
-.myblockquote{
-    font-size: 29px;
-    font-weight: 400;
-    line-height: 1.8;
-    position: relative;
-
-    &::before{
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        z-index: -1;
-        left: 0;
-        top: -12px;
-        background-image: url(../images/blockquote.svg);
-        color: black;
-    }
-}
-.letter-space4{
-    letter-spacing: 4px;
-}
-
-.owl-nav button {
-    display: none;
-  }
-
-  
-  .owl-dots {
-    text-align: center;
-    padding-top: 15px;
-  }
-  .owl-dots button.owl-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    transition: all .2s linear;
-    display: none;
-    background: #ccc;
-    margin: 0 3px;
-  }
-  .owl-dots button.owl-dot.active {
-    background-color: $summer-color;
-    width: 8px;
-    height: 10px;
-  }
-  .owl-dots button.owl-dot:focus {
-    outline: none;
-  }

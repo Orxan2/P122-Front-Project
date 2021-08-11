@@ -60,6 +60,7 @@ $(document).ready(function () {
 
 
     });
+   
 
     $('.mymodal-header .fa-times').on('click', function (params) {
         $('.mymodal-dialog').css('left', '100%');
@@ -69,13 +70,14 @@ $(document).ready(function () {
             $('.mymodal').hide();
         }, 300);
 
-    });
+    });  
 
     $('.mymodal-header a.btn').on('mouseenter', function (params) {
         $(this).css('color', '#000');
         $(this).css('transform', 'rotate(90deg)');
 
     });
+
     $('.mymodal-header a.btn').on('mouseleave', function (params) {
         $(this).css('color', '#adb5bd');
         $(this).css('transform', 'rotate(0)');
@@ -201,78 +203,81 @@ $(document).ready(function () {
                 $(element).css('animation-play-state', 'unset');
             }
         });
-
-
-
     });  
-//carousel 
 
-jQuery("#carousel").owlCarousel({
-    autoplay: true,
-    rewind: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    margin: 20,
-    loop:true,
-    responsiveClass: true,
-    autoHeight: true,
-    autoplayTimeout: 5000,
-    smartSpeed: 800,
-    nav: true,
-    responsive: {
-        0: {
-            items: 6
-        },
+//header menu click width < 992px
+$('header .menu-icon').on('click',function(){ 
+    if ($(window).width() < 992)
+  {
+    $('header .myDropdownList').slideToggle(300);
 
-        768: {
-            items: 2
-        },
+    setTimeout(() => {  
+        if (document.querySelector('header').getAttribute('data-position') == 'absolute') {
+            if (document.querySelector('header').getAttribute('data-page') == 'index') {
+                if (document.querySelector('header').style.position == 'relative') {
+                    $('header').css('position','absolute');
+                }
+                else {
+                    $('header').css('position','relative'); 
+                } 
+            }
+            else{
+                if (document.querySelector('header').style.backgroundColor == 'white')  
+            {
+                $('header').css('background','transparent'); 
+            }
+            else  
+            {
+                $('header').css('background-color','white'); 
+            } 
+            }    
+        }         
+             
+ }, 150);
 
-        992: {
-            items: 3
-        },
+ }
+    
+});
 
-        1200: {
-            items: 5
-        }
+//header menu click width > 992px
+ $('.menu-icon').on('click', function (params) {
+   if ($(window).width() >= 992) {
+    $('.mymodal2').show();
+    $('body').css('overflow', 'hidden');
+    let right = $('.mymodal2-dialog').position().left - $('.mymodal2-dialog').width() + 'px';
+    $('.mymodal2-dialog').css('left', right);
+   }  
+});
+
+
+$('.mymodal2-header a.btn').on('mouseenter', function (params) {
+    $(this).css('color', '#000');
+    $(this).css('transform', 'rotate(90deg)');
+
+});
+
+$('.mymodal2-header a.btn').on('mouseleave', function (params) {
+    $(this).css('color', '#adb5bd');
+    $(this).css('transform', 'rotate(0)');
+});
+$('.mymodal2-header .fa-times').on('click', function (params) {
+    $('.mymodal2-dialog').css('left', '100%');
+    $('body').css('overflow', 'scroll');
+
+    setTimeout(() => {
+        $('.mymodal2').hide();
+    }, 300);
+});
+$('.mymodal2__dropdown').on('click',()=>{
+   
+    if (document.querySelector('.mymodal2__dropdown-menu').style.display == 'none') {
+        $('.mymodal2__dropdown i').css('transform','rotate(-180deg)');
+    } 
+    else {
+        $('.mymodal2__dropdown i').css('transform','rotateX(0)');
     }
+    
+    $('.mymodal2__dropdown-menu').slideToggle('fast');
 });
-
-
-    setInterval(() => {
-
-        $($('.owl-dots button.owl-dot')).each(function (index, element) {
-            element = this;
-            $(element).css('display', 'none');
-        });
-
-        $('.owl-dots button.owl-dot.active').css('display','inline-block');
-        $('.owl-dots button.owl-dot.active').css('width','8px');
-        $('.owl-dots button.owl-dot.active').css('height','8px');
-
-        $('.owl-dots button.owl-dot.active').next().css('display', 'inline-block');
-        $('.owl-dots button.owl-dot.active').next().css('width', '5px');
-        $('.owl-dots button.owl-dot.active').next().css('height', '5px');
-
-        $('.owl-dots button.owl-dot.active').next().next().css('display', 'inline-block');
-        $('.owl-dots button.owl-dot.active').next().next().css('width', '3px');
-        $('.owl-dots button.owl-dot.active').next().next().css('height', '3px');
-
-        $('.owl-dots button.owl-dot.active').prev().css('display', 'inline-block');
-        $('.owl-dots button.owl-dot.active').prev().css('width', '5px');
-        $('.owl-dots button.owl-dot.active').prev().css('height', '5px');
-
-        $('.owl-dots button.owl-dot.active').prev().prev().css('display', 'inline-block');
-        $('.owl-dots button.owl-dot.active').prev().prev().css('width', '3px');
-        $('.owl-dots button.owl-dot.active').prev().prev().css('height', '3px');
-    }, 100);
-
-//header icon click
-$('header .menu-icon').on('click',()=>{
-    $('header .navbar-collapse').css('flex-direction','column');
-    $('header .navbar-collapse').slideToggle();
-    console.log('ola');
-
-});
-
 })
+

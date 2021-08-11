@@ -20,35 +20,63 @@
                 <div class="mymodal-header mx-3">
                     <a class="btn"><i class="fas fa-times"></i></a>
                 </div>
-                <div class="mymodal-body mx-5 my-4">                   
+                <div class="mymodal-body mx-5 my-4">
 
                 </div>
                 <div class="mymodal-footer mx-5">
                     <div class="heading d-flex justify-content-between">
                         <h5 class="total fw-bold">Subtotal:</h5>
-                        <h5 class="total-price fw-bold">500$</h5>
+                        <h5 class="total-price fw-bold">$0.00</h5>
                     </div>
-                    <a href="basket.html" class="btn btn-outline-success my-2 w-100">okay</a>
-                    <a href="" class="btn btn-outline-success my-2 w-100">okay</a>
+                    <a href="basket.html" class="btn btn-outline-success my-2 w-100">View Cart</a>
+                    <a href="" class="btn btn-outline-success my-2 w-100">Checkout</a>
                 </div>
             </div>
         </div>
     </div>
-   
-    <header class="bg-transparent position-absolute w-100">
-        <nav class="navbar navbar-expand-lg navbar-light px-5 py-4">
+
+    <div class="mymodal2">
+        <div class="mymodal2-dialog mymodal2-dialog-right">
+            <div class="mymodal2-content">
+                <div class="mymodal2-header mx-3">                    
+                    <a class="btn"><i class="fas fa-times"></i></a>
+                   
+                </div>
+                <div class="mymodal2-body mx-5 my-4 overflow-hidden">
+                    <h1>Varkala</h1>                   
+                </div>
+                <div class="mymodal2-body mx-5 my-4 overflow-hidden">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item border-0"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item border-0"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item border-0"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item border-0"><a class="nav-link" href="contact.html">Contact</a></li>                                             
+                    </ul>
+                </div>
+                <div class="mymodal2-footer mx-5">
+                    
+                    <p class="text-muted small">Samsa was a travelling salesman - and above it there hung a picture that he
+                        had recently cut out
+                        of an illustrated magazine and housed in a nice, gilded frame.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-transparent w-100">
+        <nav class="navbar navbar-expand-lg navbar-light px-lg-5 py-4  d-lg-block">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Varkala</a>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="index.html">Home</a>
+                            <a class="nav-link active px-2" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link px-2" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn nav-link px-2" href="blog.html">
+                            <a class="nav-link px-2" href="blog.html">
                                 Blog
                             </a>
                         </li>
@@ -66,9 +94,8 @@
                         <input class="form-control border-0 px-2" type="search" placeholder="Search">
                         <button class="btn btn-search" type="button"><i class="fas fa-search"></i></button>
                     </form>
-
-
                 </div>
+
                 <div class="svg-boxes">
                     <a href="#" class="mx-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="avatar-1">
@@ -107,7 +134,7 @@
                     </a>
                 </div>
 
-                <a class="btn menu-icon">
+                <a class="btn menu-icon" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="menu-hamburger-1">
                         <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10"
                             d="M2 14h60M2 32h36" stroke-linejoin="round" stroke-linecap="round"
@@ -116,11 +143,28 @@
                             stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
                     </svg>
                 </a>
-
+            </div>
+            <div class="container-fluid">
+                <div class="row w-100">
+                    <div class="col-12">
+                        <div class="myDropdownList d-lg-none">
+                            <ul class="navbar-nav list-group flex-column">
+                                <li class="nav-item border-0"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item border-0"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item border-0"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item border-0"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <form class="d-flex my-3">
+                                    <input class="form-control border-0 px-2 PY-3" type="search" placeholder="Search">
+                                    <button class="btn btn-search" type="button"><i class="fas fa-search"></i></button>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
-
+    
     <main>
 
 

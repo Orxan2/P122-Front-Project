@@ -3,14 +3,14 @@
 
 body {
     header {
-        // position: relative;       
+        position: absolute;
+        width: 100%;
         z-index: 1;
 
         .menu-icon {
-
             svg {
                 width: 25px;
-            }           
+            }
         }
         a.nav-link {
             font-weight: 600;
@@ -36,14 +36,14 @@ body {
             svg {
                 width: 25px;
             }
-            .quantity{
+            .quantity {
                 position: absolute;
                 top: 0;
                 left: 100%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 border-radius: 50%;
                 border: 1px solid white;
-                padding:0 0.25rem;
+                padding: 0 0.25rem;
                 font-size: 10px;
                 font-weight: 700;
                 text-shadow: 0 0 1px white;
@@ -95,7 +95,7 @@ body {
                 .shop-btn {
                     text-transform: uppercase;
                     font-weight: 700;
-                    letter-spacing: 2px;
+                    letter-spacing: 5px;
                     border: 1px solid $summer-color;
                     border-radius: 0;
                     transition: all 0.2s linear;
@@ -158,6 +158,17 @@ body {
     }
 
     section#populars {
+        .heading{
+            &__text{
+                color: $contact-text;
+                font-size: 19px;
+
+                &--space{
+                    letter-spacing: 2px;
+                }
+            }
+           
+        }
         .popular-card {
             transition: transform 0.2s linear;
             overflow: hidden;
@@ -175,11 +186,11 @@ body {
             }
             &__btn {
                 padding: 0;
-                letter-spacing: 2px;
+                letter-spacing: 4px;
                 color: $contact-hover-text;
                 font-weight: 700;
                 text-transform: uppercase;
-                font-size: 14px;
+                font-size: 12px;
             }
 
             &:hover {
@@ -241,11 +252,11 @@ body {
                     font-weight: 700;
                     text-shadow: 0 0 2px white;
                 }
-                &__time{
+                &__time {
                     height: 100px;
                     // max-height: 200px;
-                    width: 100%;                    
-                    z-index: 1;                   
+                    width: 100%;
+                    z-index: 1;
                 }
                 &__btn {
                     text-transform: uppercase;
@@ -270,11 +281,17 @@ body {
             //     position: absolute;
             // }
         }
-
-       
     }
 
     section#products {
+        .choices {
+            p {
+                font-weight: 600;
+                font-size: 19px;
+                color: $contact-text;
+                line-height: 1.7;
+            }
+        }
         .product-list {
             .list-group-item {
                 a {
@@ -307,7 +324,7 @@ body {
 
         .product-card {
             cursor: pointer;
-            animation: zoom-in .5s ease-out;
+            animation: zoom-in 0.5s ease-out;
             animation-play-state: paused;
 
             &__img {
@@ -441,7 +458,7 @@ body {
             // }
         }
     }
-    section#summer {
+    section#summer {       
         .row {
             height: 400px;
             background-color: $summer-layout;
@@ -479,7 +496,7 @@ body {
                 &__btn {
                     text-transform: uppercase;
                     font-weight: 700;
-                    letter-spacing: 2px;
+                    letter-spacing: 4px;
                     border: 1px solid $contact-hover-text;
                     border-radius: 0;
                     transition: all 0.2s linear;
@@ -657,6 +674,23 @@ body {
         }
     }
 }
+.myDropdownList{
+    display: none;
+
+    form{
+        input{
+            transition: border .3s linear;
+            border-bottom: 1px solid $contact-text !important;
+            border-radius: 0;
+            &:focus{
+                box-shadow: none;
+            }            
+            &:hover{
+                border-bottom: 1px solid #000 !important;
+            }
+        }
+    }
+}
 @keyframes slide-up {
     from {
         opacity: 0;
@@ -680,7 +714,7 @@ body {
 @keyframes zoom-in {
     0% {
         opacity: 0;
-        transform: scale(.8);
+        transform: scale(0.8);
     }
     100% {
         opacity: 1;
@@ -688,15 +722,21 @@ body {
     }
 }
 
-@media only screen and (max-width: 575px){
-    section#time{
-        .discount{
-
-            &__time{
-                height: 200px !important;                 
+@media only screen and (max-width: 575px) {
+    section#time {
+        .discount {
+            &__time {
+                height: 200px !important;
             }
         }
     }
-   
-    
+}
+@media only screen and (max-width: 768px) {
+    section#summer {
+        .slogan {
+            &__heading {
+                font-size: 45px !important;
+            }
+        }
+    }
 }

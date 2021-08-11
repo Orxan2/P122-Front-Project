@@ -13,12 +13,13 @@ a {
 .mycollapse {
     transform: rotate(0deg) !important;
 }
-.bg-muted{
+.bg-muted {
     background-color: $about-muted;
-    }
-    
-.mymodal {
-    transition: all 0.15s linear;    
+}
+
+.mymodal,
+.mymodal2 {
+    transition: all 0.15s linear;
     z-index: 1000;
     overflow: hidden;
     position: absolute;
@@ -49,13 +50,26 @@ a {
             transition: all 0.2s linear;
             font-size: 30px;
             color: $copyright-color;
-            // color: $contact-letter-color;
         }
     }
     &-body {
-        max-height: 350px;      
+        max-height: 350px;
         overflow-y: scroll;
-       
+
+        ul.navbar-nav {
+            li {
+                a {
+                    color: $contact-hover-text;
+                    transition: color 0.3s linear;
+                    &:hover {
+                        color: $summer-color;
+                    }
+                    i {                        
+                        transition: transform 0.3s linear;
+                    }
+                }
+            }            
+        }
         /* width */
         &::-webkit-scrollbar {
             width: 3px;
@@ -90,13 +104,12 @@ a {
         display: flex;
         align-items: center;
     }
-    &-title{
+    &-title {
         font-weight: 700;
         position: relative;
         padding: 4px 0;
         color: $contact-text;
         transition: color 0.3s linear;
-        
 
         &::after {
             content: "";
@@ -114,14 +127,13 @@ a {
             &::after {
                 width: 100%;
             }
+        }
+        &-price {
+            font-weight: 700;
+        }
+        &-quantity {
+            color: $copyright-color;
+            font-size: 14px;
+        }
     }
-    &-price{
-        font-weight: 700;
-    }
-    &-quantity{
-        color: $copyright-color;
-        font-size: 14px;
-    }
-}
-
 }

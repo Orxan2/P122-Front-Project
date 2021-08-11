@@ -2,6 +2,11 @@
 @import "reset";
 
 body {
+    header{
+        position: absolute;
+        background-color: transparent;
+        width: 100%;
+    }
     .blog-card {
         animation: zoom-in .5s ease-out;
         animation-play-state: paused;
